@@ -702,12 +702,87 @@
     <div class="card" id="onboardingCard"></div>
   </div>
 
-  <!-- DOCUMENTS -->
-  <div class="section" id="documents">
+  <!-- ATHLETE SURVEY -->
+  <div class="section" id="survey">
     <div class="section-header">
-      <div class="section-title">My Documents</div>
-      <div class="section-meta">Key files from your OD1 team</div>
+      <div class="section-title">Athlete Survey</div>
+      <div class="section-meta">Help us know you better</div>
     </div>
+    <div class="card">
+      <p style="font-size:14px; color:var(--od1-text-sec); line-height:1.6; margin-bottom:20px;">Take 2 minutes to fill this out — the more we know about you, the better we can pitch you to brands that actually fit.</p>
+      <div id="surveyForm">
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--od1-gray); margin-bottom:6px;">What are your top 3 favorite brands you personally use?</label>
+          <input id="sq1" type="text" placeholder="e.g. Nike, Celsius, Amazon" style="width:100%; padding:10px 14px; border:1px solid var(--od1-border-dk); border-radius:6px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:14px; color:var(--od1-text); outline:none;">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--od1-gray); margin-bottom:6px;">What content style feels most like you?</label>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <button type="button" onclick="togglePill(this,'style')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Motivational</button>
+            <button type="button" onclick="togglePill(this,'style')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Funny / Entertaining</button>
+            <button type="button" onclick="togglePill(this,'style')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Educational</button>
+            <button type="button" onclick="togglePill(this,'style')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Lifestyle</button>
+            <button type="button" onclick="togglePill(this,'style')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Behind the Scenes</button>
+          </div>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--od1-gray); margin-bottom:6px;">What brand categories feel authentic to you? (pick all that apply)</label>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <button type="button" onclick="togglePill(this,'cat')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Fitness & Sports</button>
+            <button type="button" onclick="togglePill(this,'cat')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Food & Beverage</button>
+            <button type="button" onclick="togglePill(this,'cat')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Fashion & Apparel</button>
+            <button type="button" onclick="togglePill(this,'cat')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Gaming & Tech</button>
+            <button type="button" onclick="togglePill(this,'cat')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Health & Wellness</button>
+            <button type="button" onclick="togglePill(this,'cat')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Travel & Lifestyle</button>
+            <button type="button" onclick="togglePill(this,'cat')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Beauty & Skincare</button>
+            <button type="button" onclick="togglePill(this,'cat')" style="padding:8px 14px; border:1px solid var(--od1-border-dk); border-radius:20px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); cursor:pointer;">Finance & Banking</button>
+          </div>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--od1-gray); margin-bottom:6px;">What's your #1 goal with NIL?</label>
+          <textarea id="sq2" rows="2" placeholder="e.g. Build my brand, make income, connect with brands I love..." style="width:100%; padding:10px 14px; border:1px solid var(--od1-border-dk); border-radius:6px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:14px; color:var(--od1-text); outline:none; resize:vertical;"></textarea>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--od1-gray); margin-bottom:6px;">Is there anything you won't promote?</label>
+          <input id="sq3" type="text" placeholder="e.g. Alcohol, gambling, fast food..." style="width:100%; padding:10px 14px; border:1px solid var(--od1-border-dk); border-radius:6px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:14px; color:var(--od1-text); outline:none;">
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="display:block; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--od1-gray); margin-bottom:6px;">Anything else you want your OD1 team to know?</label>
+          <textarea id="sq4" rows="2" placeholder="Tell us anything that helps us represent you better..." style="width:100%; padding:10px 14px; border:1px solid var(--od1-border-dk); border-radius:6px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:14px; color:var(--od1-text); outline:none; resize:vertical;"></textarea>
+        </div>
+        <button onclick="submitSurvey()" class="od1-btn od1-btn-primary" style="width:100%;">Submit Survey →</button>
+        <div id="surveyStatus" style="display:none; margin-top:12px; padding:12px; border-radius:6px; font-size:13px; text-align:center;"></div>
+      </div>
+      <div id="surveyDone" style="display:none; text-align:center; padding:24px 0;">
+        <div style="font-size:32px; margin-bottom:8px;">✅</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:700; text-transform:uppercase; color:var(--od1-text);">Survey Complete!</div>
+        <div style="font-size:13px; color:var(--od1-text-sec); margin-top:6px;">Your OD1 team has been notified and will review your responses.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRAND OUTREACH TEMPLATES -->
+  <div class="section" id="brand-outreach">
+    <div class="section-header">
+      <div class="section-title">Brand Outreach</div>
+      <div class="section-meta">Reach out — brands want to hear from you</div>
+    </div>
+    <div class="card">
+      <p style="font-size:14px; color:var(--od1-text-sec); line-height:1.6; margin-bottom:20px;">Enter up to 5 brands you'd love to work with. We'll generate a personalized DM template for each one — ready to copy and send. When a brand responds, drop their reply in the Brand DM section below.</p>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">
+        <input id="brand1" type="text" placeholder="Brand 1 — e.g. Nike" style="width:100%; padding:10px 14px; border:1px solid var(--od1-border-dk); border-radius:6px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:14px; color:var(--od1-text); outline:none;">
+        <input id="brand2" type="text" placeholder="Brand 2" style="width:100%; padding:10px 14px; border:1px solid var(--od1-border-dk); border-radius:6px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:14px; color:var(--od1-text); outline:none;">
+        <input id="brand3" type="text" placeholder="Brand 3" style="width:100%; padding:10px 14px; border:1px solid var(--od1-border-dk); border-radius:6px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:14px; color:var(--od1-text); outline:none;">
+        <input id="brand4" type="text" placeholder="Brand 4" style="width:100%; padding:10px 14px; border:1px solid var(--od1-border-dk); border-radius:6px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:14px; color:var(--od1-text); outline:none;">
+        <input id="brand5" type="text" placeholder="Brand 5" style="width:100%; padding:10px 14px; border:1px solid var(--od1-border-dk); border-radius:6px; background:var(--od1-page); font-family:'Barlow',sans-serif; font-size:14px; color:var(--od1-text); outline:none;">
+      </div>
+      <button onclick="generateTemplates()" class="od1-btn od1-btn-primary" style="width:100%; margin-bottom:20px;">Generate My Templates →</button>
+      <div id="templatePrompt" style="text-align:center; padding:16px 0; color:var(--od1-muted); font-size:13px;">Your personalized DM templates will appear here.</div>
+      <div id="templateResults" style="display:none;"></div>
+    </div>
+  </div>
+
+  <!-- DOCUMENTS -->
     <div style="background:#f7f6f3; border:1px solid var(--od1-border); border-radius:8px; padding:14px 18px; margin-bottom:12px; display:flex; align-items:center; gap:12px;">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--od1-gray)" stroke-width="1.8" flex-shrink="0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       <span style="font-size:13px; color:var(--od1-text-sec); line-height:1.5;">Your deals, payments, and activations live on <a href="https://opendorse.com" target="_blank" style="color:var(--od1-text); font-weight:600; text-decoration:none;">opendorse.com</a>. This portal is your OD1 home base — a place to track your onboarding, connect with your team, and access your key documents.</span>
@@ -1188,6 +1263,78 @@
     el.style.border = `1px solid ${type === 'success' ? 'rgba(255,255,255,0.15)' : 'rgba(220,50,50,0.3)'}`;
     el.textContent = msg;
     setTimeout(() => el.style.display = 'none', 4000);
+  }
+
+  // ── Pill toggle for survey ──
+  function togglePill(btn, group) {
+    btn.style.background = btn.style.background === 'var(--od1-text)' ? 'var(--od1-page)' : 'var(--od1-text)';
+    btn.style.color = btn.style.color === 'var(--od1-card)' ? 'var(--od1-text-sec)' : 'var(--od1-card)';
+    btn.style.borderColor = btn.style.borderColor === 'var(--od1-text)' ? 'var(--od1-border-dk)' : 'var(--od1-text)';
+  }
+
+  // ── Survey submit ──
+  async function submitSurvey() {
+    const athlete = ATHLETES[sessionStorage.getItem(SESSION_KEY)] || {};
+    const fullName = (athlete.first || '') + ' ' + (athlete.last || '');
+    const styles = [...document.querySelectorAll('#surveyForm button[onclick*="style"]')]
+      .filter(b => b.style.background === 'var(--od1-text)').map(b => b.textContent).join(', ');
+    const cats = [...document.querySelectorAll('#surveyForm button[onclick*="cat"]')]
+      .filter(b => b.style.background === 'var(--od1-text)').map(b => b.textContent).join(', ');
+    const brands = document.getElementById('sq1').value.trim();
+    const goal = document.getElementById('sq2').value.trim();
+    const wont = document.getElementById('sq3').value.trim();
+    const extra = document.getElementById('sq4').value.trim();
+    if (!brands) { alert('Please enter your favorite brands.'); return; }
+    const msg = `🎯 *OD1 Athlete Survey Submitted*\n*Athlete:* ${fullName}\n*Favorite Brands:* ${brands}\n*Content Style:* ${styles || 'Not selected'}\n*Brand Categories:* ${cats || 'Not selected'}\n*NIL Goal:* ${goal || '—'}\n*Won't Promote:* ${wont || '—'}\n*Additional Notes:* ${extra || '—'}`;
+    try {
+      await fetch('https://hooks.slack.com/services/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', {
+        method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: msg })
+      });
+      document.getElementById('surveyForm').style.display = 'none';
+      document.getElementById('surveyDone').style.display = 'block';
+    } catch(e) {
+      const st = document.getElementById('surveyStatus');
+      st.style.display = 'block'; st.style.color = '#e05555'; st.textContent = 'Something went wrong. Try again.';
+    }
+  }
+
+  // ── Brand Outreach Templates ──
+  function generateTemplates() {
+    const athlete = ATHLETES[sessionStorage.getItem(SESSION_KEY)] || {};
+    const name = (athlete.first || 'your name') + ' ' + (athlete.last || '');
+    const sport = athlete.sport || 'my sport';
+    const school = athlete.school || 'my school';
+    const brands = [];
+    for (let i = 1; i <= 5; i++) {
+      const val = document.getElementById('brand' + i) ? document.getElementById('brand' + i).value.trim() : '';
+      if (val) brands.push(val);
+    }
+    if (brands.length === 0) { alert('Please enter at least one brand.'); return; }
+    const container = document.getElementById('templateResults');
+    container.innerHTML = '';
+    brands.forEach((brand, i) => {
+      const template = `Hi ${brand} team!\n\nMy name is ${name} and I'm a ${sport} athlete at ${school}. I'm a huge fan of ${brand} and use your products regularly — they're genuinely a part of my routine.\n\nI'd love to explore a potential partnership or collaboration. I think my audience would really connect with ${brand}, and I'd love to authentically share your brand with them.\n\nWould love to connect if there's a fit!\n\n${name}`;
+      container.innerHTML += `
+        <div style="margin-bottom:16px; padding:16px; background:var(--od1-page); border:1px solid var(--od1-border); border-radius:8px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+            <div style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--od1-text);">${brand}</div>
+            <button onclick="copyTemplate(this)" style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; background:var(--od1-text); color:var(--od1-card); border:none; border-radius:4px; padding:6px 12px; cursor:pointer;">Copy →</button>
+          </div>
+          <pre style="font-family:'Barlow',sans-serif; font-size:13px; color:var(--od1-text-sec); line-height:1.6; white-space:pre-wrap; margin:0;">${template}</pre>
+        </div>`;
+    });
+    document.getElementById('templateResults').style.display = 'block';
+    document.getElementById('templatePrompt').style.display = 'none';
+  }
+
+  function copyTemplate(btn) {
+    const pre = btn.closest('div').querySelector('pre');
+    navigator.clipboard.writeText(pre.textContent).then(() => {
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = 'Copy →', 2000);
+    });
   }
 </script>
 </body>
